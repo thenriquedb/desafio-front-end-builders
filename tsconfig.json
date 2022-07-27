@@ -4,6 +4,10 @@
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
+    "baseUrl": "./",    
+    "paths": {
+      "@features/*": ["./src/features/*"]
+    },
     "skipLibCheck": true,
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
