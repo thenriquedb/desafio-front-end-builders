@@ -1,8 +1,8 @@
-import { ThemeProvider } from "styled-components";
 import { Weather } from "@features/weather/pages/Weather";
+import { ThemeProvider } from "styled-components";
 
 import { GlobalStyle } from "./theme/global";
-import theme from "./theme";
+import theme from "./theme/index";
 
 function App() {
   return (
