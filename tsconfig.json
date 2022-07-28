@@ -6,7 +6,8 @@
     "allowJs": false,
     "baseUrl": "./",    
     "paths": {
-      "@features/*": ["./src/features/*"]
+      "@features/*": ["./src/features/*"],
+      "@theme/*": ["./src/theme/*"]
     },
     "skipLibCheck": true,
     "esModuleInterop": false,
