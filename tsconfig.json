@@ -7,7 +7,8 @@
     "baseUrl": "./",    
     "paths": {
       "@features/*": ["./src/features/*"],
-      "@theme/*": ["./src/theme/*"]
+      "@theme/*": ["./src/theme/*"],
+      "@utils/*": ["./src/utils/*"],
     },
     "skipLibCheck": true,
     "esModuleInterop": false,
