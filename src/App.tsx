@@ -1,5 +1,16 @@
+import { ThemeProvider } from "styled-components";
+import { Weather } from "@features/weather/pages/Weather";
+
+import { GlobalStyle } from "./theme/global";
+import theme from "./theme";
+
 function App() {
-  return <div className="App">My App</div>;
+  return (
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Weather />
+    </ThemeProvider>
+  );
 }
 
 export default App;
