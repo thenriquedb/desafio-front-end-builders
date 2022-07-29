@@ -6,6 +6,7 @@ import styled, { css } from "styled-components";
 export interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
   align?: CSS.Property.TextAlign;
   bold?: boolean;
+  inline?: boolean;
   color?: Color;
   size?: FontSize;
   transform?: CSS.Property.TextTransform;
@@ -23,6 +24,12 @@ const StyledText = styled.p<TextProps>`
     bold &&
     css`
       font-weight: bold;
+    `}
+
+  ${({ inline }) =>
+    inline &&
+    css`
+      display: inline-block;
     `}
 `;
 
