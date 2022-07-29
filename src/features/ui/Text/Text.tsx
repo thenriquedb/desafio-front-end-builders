@@ -6,11 +6,13 @@ import styled, { css } from "styled-components";
 export interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
   align?: CSS.Property.TextAlign;
   bold?: boolean;
-  inline?: boolean;
   color?: Color;
+  inline?: boolean;
   size?: FontSize;
   transform?: CSS.Property.TextTransform;
+  truncate?: boolean;
   weight?: CSS.Property.FontWeight;
+  as?: React.ElementType;
 }
 
 const StyledText = styled.p<TextProps>`
@@ -19,6 +21,16 @@ const StyledText = styled.p<TextProps>`
   text-transform: ${({ transform = "none" }) => transform};
   font-weight: ${({ weight = "regular" }) => weight};
   text-align: ${({ align = "left" }) => align};
+  line-height: normal;
+
+  ${({ truncate }) =>
+    truncate &&
+    css`
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    `}
 
   ${({ bold }) =>
     bold &&
@@ -29,7 +41,7 @@ const StyledText = styled.p<TextProps>`
   ${({ inline }) =>
     inline &&
     css`
-      display: inline-block;
+      display: inline;
     `}
 `;
 
