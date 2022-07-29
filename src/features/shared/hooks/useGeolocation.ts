@@ -1,4 +1,5 @@
-import { useEffect, useState, } from 'react';
+/* eslint-disable no-undef */
+import { useEffect, useState } from "react";
 
 export const useGeolocation = (positionOptions = {} as PositionOptions) => {
   const [coordinates, setCoordinates] = useState<GeolocationCoordinates>({
@@ -17,16 +18,20 @@ export const useGeolocation = (positionOptions = {} as PositionOptions) => {
     if (!navigator.geolocation) {
       console.error("Geolocation not available for your browser");
     }
-  }, [])
+  }, []);
 
   useEffect(() => {
-    const handleGeolocationSuccessCallback = (position: GeolocationPosition) => {
+    const handleGeolocationSuccessCallback = (
+      position: GeolocationPosition
+    ) => {
       setCoordinates(position.coords);
-    }
+    };
 
-    const handleGeolocationErrorCallback = (error: GeolocationPositionError) => {
-      setError(error)
-    }
+    const handleGeolocationErrorCallback = (
+      geolocationPositionError: GeolocationPositionError
+    ) => {
+      setError(geolocationPositionError);
+    };
 
     navigator.geolocation.getCurrentPosition(
       handleGeolocationSuccessCallback,
@@ -36,5 +41,4 @@ export const useGeolocation = (positionOptions = {} as PositionOptions) => {
   }, []);
 
   return { coordinates, error };
-}
-
+};
