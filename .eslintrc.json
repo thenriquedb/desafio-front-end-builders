@@ -42,6 +42,7 @@
                 ]
             }
         ],
+        "no-undef": "off",
         "react/prop-types": "off",
         "no-return-assign": "off",
         "@typescript-eslint/no-namespace": "off",
