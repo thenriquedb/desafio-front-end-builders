@@ -7,6 +7,7 @@
     "extends": [
         "plugin:react/recommended",
         "airbnb",
+        "plugin:@typescript-eslint/recommended",
         "prettier",
         "plugin:prettier/recommended"
     ],
@@ -28,6 +29,7 @@
     "rules": {
         "prettier/prettier": "error",
         "react/jsx-uses-react": "off",
+        "no-unused-vars": "off",
         "react/react-in-jsx-scope": "off",
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
