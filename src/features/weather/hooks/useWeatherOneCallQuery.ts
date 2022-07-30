@@ -89,7 +89,7 @@ interface UseWeatherParams {
 }
 
 export const useWeatherOneCallQuery = ({ lat, lon }: UseWeatherParams) => {
-  const [fetchData, requestStatus] = useWeatherApi("/onecall", {
+  const [fetchData, requestStatus] = useWeatherApi<Response>("/onecall", {
     params: {
       lat,
       lon,
