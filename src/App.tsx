@@ -1,3 +1,4 @@
+import { WeatherProvider } from "@features/weather/contexts/WeatherContext";
 import { Weather } from "@features/weather/pages/Weather";
 import { ThemeProvider } from "styled-components";
 
@@ -8,7 +9,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Weather />
+      <WeatherProvider>
+        <Weather />
+      </WeatherProvider>
     </ThemeProvider>
   );
 }
