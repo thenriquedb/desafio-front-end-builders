@@ -58,7 +58,7 @@ interface Wind {
 }
 
 export const useWeatherQuery = ({ lat, lon }: { lat: number; lon: number }) => {
-  const [fetchData, requestStatus] = useWeatherApi("/weather", {
+  const [fetchData, requestStatus] = useWeatherApi<Response>("/weather", {
     params: {
       lat,
       lon,
