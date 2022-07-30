@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -10,6 +10,10 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors.text};
+    font-family: ${({ theme }) => theme.fonts.regular};
+  }
+  
+  button, input {
     font-family: ${({ theme }) => theme.fonts.regular};
   }
 
@@ -32,4 +36,4 @@ export const GlobalStyle = createGlobalStyle`
   }
 
 
-`
+`;

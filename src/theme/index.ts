@@ -3,7 +3,7 @@ const colors = {
   background: "#f6f6f8",
   black: "#1e1714",
   gray: "#a4a6ac",
-  primary: "#fea31f",
+  primary: "#FFCC00",
   secondary: "#fbbc2e",
   shape: "#fff",
   text: "#1e1714",
@@ -45,6 +45,7 @@ const space = {
 };
 
 export const fontSizes = {
+  xxs: "0.75rem",
   xs: "0.875rem",
   sm: "1rem",
   md: "1.125rem",
