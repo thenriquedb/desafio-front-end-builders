@@ -23,6 +23,6 @@ export const LocationDetailsWrapper = styled.div``;
 export const WeatherIcon = styled.div`
   height: 160px;
   width: 160px;
-  background-repeat: "no-repeat";
-  background-size: "contain";
+  background-repeat: no-repeat;
+  background-size: contain;
 `;
