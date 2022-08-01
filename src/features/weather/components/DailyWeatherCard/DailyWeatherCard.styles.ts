@@ -1,14 +1,8 @@
+import { Card } from "@features/ui/Card";
 import styled from "styled-components";
 
-export const Container = styled.div`
-  background: ${({ theme }) => theme.colors.shape};
-  padding: ${({ theme }) => theme.space[4]};
-  border-radius: 10px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.15);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+export const Container = styled(Card)`
+  padding: ${({ theme }) => theme.space[2]};
 
   > img {
     margin: 0 auto;
@@ -16,8 +10,8 @@ export const Container = styled.div`
 `;
 
 export const WeatherIcon = styled.div`
-  height: 50px;
-  width: 50px;
+  height: 70px;
+  width: 70px;
   background-repeat: no-repeat;
   background-size: contain;
 `;
@@ -25,5 +19,10 @@ export const WeatherIcon = styled.div`
 export const TemperatureWrapper = styled.div`
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: center;
+  margin-top: ${({ theme }) => theme.space[1]};
+
+  > p:first-of-type {
+    margin-right: 10px;
+  }
 `;

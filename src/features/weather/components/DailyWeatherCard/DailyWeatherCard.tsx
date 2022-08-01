@@ -1,3 +1,4 @@
+import { Card } from "@features/ui/Card";
 import { Text } from "@features/ui/Text";
 import { useWeatherContext } from "@features/weather/contexts/WeatherContext";
 import { capitalize } from "@utils/capitalize";
@@ -34,7 +35,7 @@ export function DailyWeatherCard({
   }
 
   return (
-    <Container>
+    <Container center>
       <Text bold size="sm" align="center">
         {formatDate()}
       </Text>
