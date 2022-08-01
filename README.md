@@ -1,19 +1,21 @@
+# Desafio front-end Builders
 <center>
 <img src="./docs/app.png">
 </center>
 
-- [Sobre o desafio](#sobre-o-desafio)
-- [Dependências](#dependências)
-  - [Dependências de produção](#dependências-de-produção)
-  - [Dependências de desenvolvimento](#dependências-de-desenvolvimento)
-- [Template](#template)
-- [Executando o projeto](#executando-o-projeto)
-- [🏗️ Estrutura do projeto](#️-estrutura-do-projeto)
-  - [Modúlos](#modúlos)
-    - [`features/shared`](#featuresshared)
-    - [`features/ui`](#featuresui)
-    - [`features/weather`](#featuresweather)
-- [Referências](#referências)
+- [Desafio front-end Builders](#desafio-front-end-builders)
+  - [Sobre o desafio](#sobre-o-desafio)
+  - [Dependências](#dependências)
+    - [Dependências de produção](#dependências-de-produção)
+    - [Dependências de desenvolvimento](#dependências-de-desenvolvimento)
+  - [Template](#template)
+  - [Executando o projeto](#executando-o-projeto)
+  - [🏗️ Estrutura do projeto](#️-estrutura-do-projeto)
+    - [Modúlos](#modúlos)
+      - [`features/shared`](#featuresshared)
+      - [`features/ui`](#featuresui)
+      - [`features/weather`](#featuresweather)
+  - [Referências](#referências)
 
 ## Sobre o desafio
 Desenvolva um aplicativo que consuma a localização atual do usuário e exiba na interface o endereço atual os dados climáticos da região e um botão para atualizar os dados. Para fazer essa busca, pode-se usar a API do [Open Weather Map](https://openweathermap.org/).
