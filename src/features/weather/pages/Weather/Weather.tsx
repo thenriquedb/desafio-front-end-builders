@@ -1,9 +1,10 @@
 import { useGeolocation } from "@features/shared/hooks/useGeolocation";
-import { Card } from "@features/ui/Card";
 import { Heading } from "@features/ui/Heading";
+import { Spinner } from "@features/ui/Spinner";
 
 import { CurrentWeather } from "../../components/CurrentWeather";
 import { DailyWeatherCard } from "../../components/DailyWeatherCard";
+import { Loading } from "../../components/Loading";
 import { TemperatureUnitButton } from "../../components/TemperatureUnitButton";
 import { TodayHighlights } from "../../components/TodayHighlights";
 import { Unit, useWeatherContext } from "../../contexts/WeatherContext";
@@ -33,7 +34,7 @@ export function Weather() {
       lon: coordinates?.longitude,
     });
 
-  if (isLoadingWeather || isLoadingOneCall) return <p>loading</p>;
+  if (isLoadingWeather || isLoadingOneCall) return <Loading />;
 
   return (
     <Container>
