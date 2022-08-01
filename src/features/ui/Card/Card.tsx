@@ -1,5 +1,5 @@
 import { Text, TextProps } from "@features/ui/Text";
-import { HTMLAttributes } from "react";
+import { HTMLAttributes, PropsWithChildren } from "react";
 
 import { StyledCard, StyledContent } from "./Card.styles";
 
@@ -25,7 +25,7 @@ function CardTitle({
   );
 }
 
-function CardContent({ children }) {
+function CardContent({ children }: PropsWithChildren<{}>) {
   return <StyledContent>{children}</StyledContent>;
 }
 
